@@ -21,7 +21,7 @@
           "error",
           {
             "type": "element",
-            "prefix": "doran-jones-interviews",
+            "prefix": "app",
             "style": "kebab-case"
           }
         ]
