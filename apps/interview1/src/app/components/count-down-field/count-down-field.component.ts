@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, DoCheck } from '@angular/core';
+import { throws } from 'assert';
+import { Subscription, interval, BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-count-down-field',
@@ -6,21 +8,38 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./count-down-field.component.scss'],
 })
 export class CountDownFieldComponent implements OnInit {
-  label = '05:00';
+  label = '';
+  time = new BehaviorSubject('');
+  timeSubscription = this.time.asObservable();
+  timer = 60 * 5;
+  minutes = 0;
+  seconds = 0;
 
   ngOnInit(): void {
-    let timer = 60 * 5;
-    let minutes, seconds;
-    setInterval(() => {
-      minutes = parseInt((timer / 60).toString(), 10);
-      seconds = parseInt((timer % 60).toString(), 10);
-
-      minutes = minutes < 10 ? '0' + minutes : minutes;
-      seconds = seconds < 10 ? '0' + seconds : seconds;
-      this.label = minutes + ':' + seconds;
-      if (--timer < 0) {
-        this.label = '00:00';
+    this.timeSubscription.subscribe((newTime) => {
+      if (newTime) {
+        this.label = newTime;
       }
+    });
+
+    this.doTimer();
+
+    setInterval(() => {
+      this.doTimer();
     }, 1000);
+  }
+
+  doTimer(): void {
+    if (this.timer < 0) {
+      this.time.next('00:00');
+      return;
+    }
+    this.minutes = parseInt((this.timer / 60).toString(), 10);
+    this.seconds = parseInt((this.timer % 60).toString(), 10);
+
+    const str_minutes = this.minutes < 10 ? '0' + this.minutes : this.minutes;
+    const str_seconds = this.seconds < 10 ? '0' + this.seconds : this.seconds;
+    this.time.next(str_minutes + ':' + str_seconds);
+    this.timer--;
   }
 }

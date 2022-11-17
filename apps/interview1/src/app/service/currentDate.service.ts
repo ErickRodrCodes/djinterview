@@ -7,10 +7,6 @@ export class CurrentDateService {
 
   intialize() {
     if (!this.isInitialized) {
-      this.dateSubscription.subscribe((newDate) => {
-        console.log(newDate.toLocaleTimeString());
-      });
-
       setInterval(() => {
         this.date.next(new Date());
       }, 1000);
