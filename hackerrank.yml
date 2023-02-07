@@ -14,12 +14,12 @@ configuration:
     #   - tests/custom_test_[1-2].sh
     #   - app/secret_test
   hidden_files_paths:
-    - apps/interview1/src/app/app.component.spec.ts
+    - src/apps/interview1/src/app/app.component.spec.ts
 
   ide_config:
     default_open_files:
 
-      - apps/interview1/src/app/app.component.html
+      - src/apps/interview1/src/app/app.component.html
     project_menu:
       run: npm start
       install: npm install --silent
