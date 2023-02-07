@@ -2,21 +2,17 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { ButtonComponent } from './components/button/button.component';
 import { CountDownFieldComponent } from './components/count-down-field/count-down-field.component';
 import { CurrentDateFieldComponent } from './components/current-date-field/current-date-field.component';
-import { CurrentDateService } from './service/currentDate.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ButtonComponent,
     CountDownFieldComponent,
     CurrentDateFieldComponent,
   ],
   imports: [BrowserModule],
-  providers: [CurrentDateService],
+  providers: [],
   bootstrap: [AppComponent],
-  exports: [ButtonComponent],
 })
 export class AppModule {}

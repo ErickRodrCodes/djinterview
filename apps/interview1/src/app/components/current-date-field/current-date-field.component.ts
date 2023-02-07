@@ -10,9 +10,5 @@ export class CurrentDateFieldComponent implements OnInit {
 
   constructor(private currentDateService: CurrentDateService) {}
 
-  ngOnInit(): void {
-    this.currentDateService.dateSubscription.subscribe((newDate) => {
-      this.label = newDate.toLocaleTimeString();
-    });
-  }
+  ngOnInit(): void {}
 }
