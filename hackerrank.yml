@@ -13,8 +13,8 @@ configuration:
     # hidden_files_paths:
     #   - tests/custom_test_[1-2].sh
     #   - app/secret_test
-    hidden_files_paths:
-      - apps/interview1/src/app/app.component.spec.ts
+  hidden_files_paths:
+    - apps/interview1/src/app/app.component.spec.ts
 
   ide_config:
     default_open_files:
