@@ -1,5 +1,10 @@
-<app-button [ButtonClass]="ButtonClass1" [ButtonText]="Button1" [ButtonAction]="ButtonAction1"></app-button>
-<app-button [ButtonClass]="ButtonClass2" [ButtonText]="Button2" [ButtonAction]="ButtonAction2"></app-button>
+<button [ngClass]="ButtonClass1" (click)="ButtonAction1()">
+  {{Button1}}
+</button>
+<button [ngClass]="ButtonClass2" (click)="ButtonAction2()">
+  {{Button2}}
+</button>
+
 <div class="labelContainer">
   <ng-template #labelContainer></ng-template>
 </div>

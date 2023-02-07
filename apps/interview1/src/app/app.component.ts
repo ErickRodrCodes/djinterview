@@ -15,8 +15,8 @@ export class AppComponent implements OnInit {
   })
   viewContainerRef!: ViewContainerRef;
   Button1 = 'Add Countdown';
-  Button2 = 'Add Current time';
-  ButtonClass1 = 'red';
+  Button2 = 'Add Current Time';
+  ButtonClass1 = 'blue';
   ButtonClass2 = 'blue';
 
   ButtonAction1 = () => {};
@@ -31,13 +31,11 @@ export class AppComponent implements OnInit {
   }
 
   public addDate = () => {
-    console.log('Add Date');
     const viewContainerRef = this.viewContainerRef;
     viewContainerRef.createComponent(CurrentDateFieldComponent);
   };
 
   public addCountDown = () => {
-    console.log('Add CountDown');
     const viewContainerRef = this.viewContainerRef;
     viewContainerRef.createComponent(CountDownFieldComponent);
   };
