@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CurrentDateService } from '../../service/currentDate.service';
+
 @Component({
   selector: 'app-current-date-field',
   templateUrl: './current-date-field.component.html',
@@ -8,7 +8,7 @@ import { CurrentDateService } from '../../service/currentDate.service';
 export class CurrentDateFieldComponent implements OnInit {
   label = '';
 
-  constructor(private currentDateService: CurrentDateService) {}
+  constructor() {}
 
   ngOnInit(): void {}
 }
