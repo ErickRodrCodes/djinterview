@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { CountDownFieldComponent } from './components/count-down-field/count-down-field.component';
 import { CurrentDateFieldComponent } from './components/current-date-field/current-date-field.component';
+import { CurrentDateService } from './service/currentDate.service';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,7 @@ import { CurrentDateFieldComponent } from './components/current-date-field/curre
     CurrentDateFieldComponent,
   ],
   imports: [BrowserModule],
-  providers: [],
+  providers: [CurrentDateService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
