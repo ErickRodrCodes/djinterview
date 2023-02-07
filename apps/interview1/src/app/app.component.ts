@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
-import { Component, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,10 +7,6 @@ import { Component, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  @ViewChild('labelContainer', {
-    read: ViewContainerRef,
-  })
-  viewContainerRef!: ViewContainerRef;
   Button1 = 'Add Countdown';
   Button2 = 'Add Current Time';
   ButtonClass1 = 'blue';
