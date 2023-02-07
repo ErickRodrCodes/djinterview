@@ -3,8 +3,8 @@ configuration:
   has_webserver: true
   scoring:
     command: npm install --silent && npm test
-    # files:
-    #  - unit.xml
+    files:
+     - unit.xml
     # Define hidden test cases and declare file paths below to evaluate candidates' submissions.
     #
     # Learn more:
@@ -14,11 +14,12 @@ configuration:
     #   - tests/custom_test_[1-2].sh
     #   - app/secret_test
   hidden_files_paths:
-    - src/apps/interview1/src/app/app.component.spec.ts
+    - apps/interview1/src/app/app.component.spec.ts
 
   ide_config:
     default_open_files:
-      - src/apps/interview1/src/app/app.component.html
+
+      - apps/interview1/src/app/app.component.html
     project_menu:
       run: npm start
       install: npm install --silent
