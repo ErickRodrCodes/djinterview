@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="4" failures="0" errors="0" time="4.165">
+  <testsuite name="AppComponent" errors="0" failures="0" skipped="0" timestamp="2023-02-07T22:05:18" time="3.052" tests="4">
+    <testcase classname="AppComponent should create the app" name="AppComponent should create the app" time="0.065">
+    </testcase>
+    <testcase classname="AppComponent should initialize the app with two buttons" name="AppComponent should initialize the app with two buttons" time="0.011">
+    </testcase>
+    <testcase classname="AppComponent Add Countdown button: should add on click a new count down div on the label container" name="AppComponent Add Countdown button: should add on click a new count down div on the label container" time="0.019">
+    </testcase>
+    <testcase classname="AppComponent Add Current Time button: should add on click a new current date div on the label container" name="AppComponent Add Current Time button: should add on click a new current date div on the label container" time="0.027">
+    </testcase>
+  </testsuite>
+</testsuites>
